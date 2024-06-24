@@ -1,0 +1,24 @@
+React實際上的執行順序
+
+1.先有state數據
+2.JSX模板
+
+3.生成虛擬DOM(虛擬DOM就是一個JS對象，用它來描述真實DOM)
+(損耗了性能但極小，遠小於創建DOM，因為要調用application級別的API)
+['div',{id:'abc'},['span',{},'hello world']] 
+
+4.用虛擬的DOM的結構，生成真實的DOM顯示
+<div id ='abc'><span>hello world</span></div>
+
+5.state發生變化
+
+6.生成新的虛擬DOM
+['div',{id:'abc'},['span',{},'bye bye']] 
+
+7.比較原始虛擬DOM和新的虛擬DOM的區別，找到區別是span中的內容
+
+8.直接操作DOM，改變span中的內容
+
+優點:
+1.性能提升了
+2.它使得跨端應用得以實現。React Native 
