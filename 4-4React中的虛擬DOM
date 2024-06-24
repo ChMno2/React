@@ -1,5 +1,6 @@
 React中的虛擬DOM
 DOM在React中會經過以下幾個部分
+第一個版本
 1.先有state數據
 2.JSX模板
 3.當數據和模板相結合，生成真實的DOM顯示
@@ -11,7 +12,7 @@ DOM在React中會經過以下幾個部分
 第二次生成一個完整的DOM
 第二次的DOM替換第一次的DOM,非常耗性能
 
-改良：
+第二個版本改良：
 1.先有state數據
 2.JSX模板
 3.當數據和模板相結合，生成真實的DOM顯示
@@ -21,3 +22,26 @@ DOM在React中會經過以下幾個部分
 6.將新的DOM和原始的DOM做對比,找尋差異
 7.找出input框發生的變化
 8.使用新的DOM中的Input元素，替換掉老的DOM中的input元素
+
+缺陷:
+性能的提升並不明顯
+
+第三個版本改良:
+1.先有state數據
+2.JSX模板
+3.當數據和模板相結合，生成真實的DOM顯示
+<div id ='abc'><span>hello world</span></div>
+4.生成虛擬DOM(虛擬DOM就是一個JS對象，用它來描述真實DOM)
+(損耗了性能但極小，遠小於創建DOM，因為要調用application級別的API)
+['div',{id:'abc'},['span',{},'hello world']] 
+5.state發生變化
+6.生成新的虛擬DOM
+['div',{id:'abc'},['span',{},'bye bye']] 
+7.比較原始虛擬DOM和新的虛擬DOM的區別，找到區別是span中的內容
+
+
+4.當使用者更改，state數據發生改變
+5.數據和模板相結合，生成真實的DOM顯示
+5.數據和模板相結合生成真實的DOM，並不直接替換原始的DOM
+6.將新的DOM和原始的DOM做對比,找尋差異
+
