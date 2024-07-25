@@ -106,7 +106,7 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 
 -----------------------------
 
-重複渲染、條件渲染、預設值、 dangerouslySetInnerHTML
+# 重複渲染、條件渲染、預設值、 dangerouslySetInnerHTML
 
 1. 重複渲染： map
 2. 條件渲染： &&
@@ -127,6 +127,17 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
     * 比較簡潔
     * 可避免不必要渲染
     * 可避免 this 問題
+
+-----------------------------
+
+Lifecycle 和 Class Component
+
+1. 元件像人一樣有生有死，而生命週期幫助我們能在「特定階段」，做「只有該階段會做的事情」
+2. constructor ：初始化與建構物件
+3. render ：渲染
+4. componentDidMount：只有第一次渲染會執行
+5. componentDidUpdate ：每次重新渲染都會執行
+6. componentWillUnmount ：元件卸載前要做的事情
 
 
 
