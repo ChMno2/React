@@ -104,6 +104,21 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 4. Props 本身無法更改，但可以在子元件呼叫父元件的 setState 來改變值，也可用同樣方法來從子元件傳參數給父元件
 5. State 控制的是自己本身， 且可以被改變， Props 讓父元件來控制自己，唯獨、不可被改變
 
+-----------------------------
+
+# Functional Component 、 Class Component
+
+1. 以前就有這兩種寫法，只是 React 16.8 之後多了 Hook ，讓 Functional Component 能做的事變多了
+2. Class Component 要注意：
+    * State 統一放在 state 物件，取用要加上 this.state
+    * 改值要使用 this.setState ，只會替換掉有改變的內容
+    * 只要有調用 this.setState 就重新渲染
+    * 用 props 傳改變 State 的函式需搭配 .bind(this) 
+3. 相較之下， Functional Component 
+    * 比較簡潔
+    * 可避免不必要渲染
+    * 可避免 this 問題
+
 
 
 
