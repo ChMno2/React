@@ -1,4 +1,3 @@
-
 # 前端三大框架:React
 
 ## React Vue Angular
@@ -11,7 +10,7 @@ React需要搭配其他函示庫來建立使用者介面，在網頁中常使用
 
 -----------------------------
 
-# React 的優點有：
+## React 的優點有：
     * 用純 JS 在前端產生 HTML 
     * 使用 Virtual DOM 重繪效率高
     * 重視「元件」的概念 通用性高
@@ -21,7 +20,7 @@ React需要搭配其他函示庫來建立使用者介面，在網頁中常使用
 
 -----------------------------
 
-# [ 開始載入 React ，並認識擴充套件和資料夾架構 ]
+## [ 開始載入 React ，並認識擴充套件和資料夾架構 ]
 1. npx create-react-app 可以創建專案
 2. npm start 可以在本地端跑專案
 3. 資料夾架構：
@@ -34,7 +33,7 @@ React需要搭配其他函示庫來建立使用者介面，在網頁中常使用
 
 -----------------------------
 
-# JSX
+## JSX
 JSX是一種JS語法擴充、語法糖，用比較簡約的方式讓JS操控DOM
 
 1. 好處：
@@ -51,7 +50,7 @@ JSX是一種JS語法擴充、語法糖，用比較簡約的方式讓JS操控DOM
 
 -----------------------------
 
-# 元件
+## 元件
 
 打開google research每個搜尋的紀錄都是一個元件，
 React在使用者建立模板後，以後直接呼叫元件，即可產生相同的模板
@@ -79,7 +78,7 @@ const [num, setNum] = useState(0)
 
 -----------------------------
 
-# useState 背後原理與 setState 非同步問題
+## useState 背後原理與 setState 非同步問題
 
 usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 當宣告一個陣列對應到use state時，就可將宣告的陣列賦予新的意義
@@ -96,7 +95,7 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 
 -----------------------------
 
-# Props 、 State 和 Props 比較
+## Props 、 State 和 Props 比較
 
 1. props 是用來單向傳遞父元件到子元件的資料
 2. 寫法如 data={ parentData } ，前面是子元件要使用的名稱，後面是父元件要傳的 State 名稱
@@ -106,7 +105,7 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 
 -----------------------------
 
-# 重複渲染、條件渲染、預設值、 dangerouslySetInnerHTML
+## 重複渲染、條件渲染、預設值、 dangerouslySetInnerHTML
 
 1. 重複渲染： map
 2. 條件渲染： &&
@@ -115,7 +114,7 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 
 -----------------------------
 
-# Functional Component 、 Class Component
+## Functional Component 、 Class Component
 
 1. 以前就有這兩種寫法，只是 React 16.8 之後多了 Hook ，讓 Functional Component 能做的事變多了
 2. Class Component 要注意：
@@ -130,7 +129,7 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 
 -----------------------------
 
-# Lifecycle 和 Class Component
+## Lifecycle 和 Class Component
 
 1. 元件像人一樣有生有死，而生命週期幫助我們能在「特定階段」，做「只有該階段會做的事情」
 2. constructor ：初始化與建構物件
@@ -141,7 +140,7 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 
 -----------------------------
 
-# Lifecycle 和 useEffect
+## Lifecycle 和 useEffect
 
 
 1. useEffect 含有兩個參數，第一個放要執行的箭頭函式，第二個放要監聽的值，會放在陣列當中
@@ -151,7 +150,7 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 
 -----------------------------
 
-# Hook
+## Hook
 
 1. Hook 是 React 先寫好的東西，方便我們不用從頭造輪子、可以直接開發，之前提過的 useState useEffect 都是 Hook
 2. 注意：
@@ -165,7 +164,7 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 
 -----------------------------
 
-# 建立 JSON Server 用 useEffect 模擬抓取、送出與刪除資料
+## 建立 JSON Server 用 useEffect 模擬抓取、送出與刪除資料
 
 npx json-server --watch data/db.json --port 8000
 
