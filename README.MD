@@ -106,6 +106,15 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 
 -----------------------------
 
+重複渲染、條件渲染、預設值、 dangerouslySetInnerHTML
+
+1. 重複渲染： map
+2. 條件渲染： &&
+3. 預設值： ||
+4. dangerouslySetInnerHTML={{__html: State}}
+
+-----------------------------
+
 # Functional Component 、 Class Component
 
 1. 以前就有這兩種寫法，只是 React 16.8 之後多了 Hook ，讓 Functional Component 能做的事變多了
