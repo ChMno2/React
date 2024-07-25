@@ -130,7 +130,7 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 
 -----------------------------
 
-Lifecycle 和 Class Component
+# Lifecycle 和 Class Component
 
 1. 元件像人一樣有生有死，而生命週期幫助我們能在「特定階段」，做「只有該階段會做的事情」
 2. constructor ：初始化與建構物件
@@ -139,6 +139,15 @@ Lifecycle 和 Class Component
 5. componentDidUpdate ：每次重新渲染都會執行
 6. componentWillUnmount ：元件卸載前要做的事情
 
+-----------------------------
+
+# Lifecycle 和 useEffect
+
+
+1. useEffect 含有兩個參數，第一個放要執行的箭頭函式，第二個放要監聽的值，會放在陣列當中
+2. 對應到 componentDidMount：第二個參數放空陣列
+3. 對應到 componentDidUpdate ：第二個參數監聽要監聽的值
+4. 對應到 componentWillUnmount ：第二個參數放空陣列，第一個參數要把要執行的事情放在 return 中
 
 
 
