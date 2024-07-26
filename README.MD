@@ -168,7 +168,13 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 
 npx json-server --watch data/db.json --port 8000
 
+-----------------------------
 
+## 客製化 Hook
+
+1. 重用 stateful 邏輯幫助我們能製作客製化 Hook 
+2. 撰寫時記得思考，怎樣可以增加重用性？（例如使用通用性高的命名、把可能不一樣的東西抽出來等）
+3. 可搭配 useEffect 做監聽
 
 
 
