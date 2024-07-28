@@ -176,6 +176,17 @@ npx json-server --watch data/db.json --port 8000
 2. 撰寫時記得思考，怎樣可以增加重用性？（例如使用通用性高的命名、把可能不一樣的東西抽出來等）
 3. 可搭配 useEffect 做監聽
 
+-----------------------------
 
+## React Router 、 HashRouter 與 BrowserRouter
+
+1.  使用 npm install react-router-dom@5 下載 React Router
+2.  架構為：
+       * BrowserRouter 是後端路由 / HashRouter 是前端路由
+       * Switch ：會從上到下判斷 Switch 裡頭所有的 Route ，下一層一定要是 Route
+       * Route ：印出第一個符合條件的 Route 包的元件，但條件只要一部分符合就算成符合，
+          因此為避免判斷錯誤可加上 exact
+       * 頁面元件
+3.  把 a href 改為 Link to
 
 
