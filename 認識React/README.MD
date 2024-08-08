@@ -178,9 +178,101 @@ son-server 這個套件的指令為： npx json-server --watch data/db.json --po
 
 -----------------------------
 
-# 
+# React Router 、 HashRouter 與 BrowserRouter
 
+1.  使用 npm install react-router-dom@5 下載 React Router
+2.  架構為：
+       * BrowserRouter 是後端路由 / HashRouter 是前端路由
+       * Switch ：會從上到下判斷 Switch 裡頭所有的 Route ，下一層一定要是 Route
+       * Route ：印出第一個符合條件的 Route 包的元件，但條件只要一部分符合就算成符合，
+          因此為避免判斷錯誤可加上 exact
+       * 頁面元件
+3.  把 a href 改為 Link to
 
+-----------------------------
+
+# useParams 與動態路徑參數、 useHistory 與重新導向和 404 頁面
+
+1. useParams 這個 Hook 可幫助我們取得網址後面的 id ，藉此完成商品內頁
+2. useHistory 這個 Hook 可幫助我們達到前往上一頁、下一頁、特定頁的功能
+3. 在路由表最後一項設定 Route path="*" ，並包住 404 頁面元件。因為當前面的路由條件都不符合，至少一定會符合這項。也就是說，當客人輸的網址跟我們設定的都不同時，會印出 404 頁面元件
+
+-----------------------------
+
+# 引入 CSS ( inline-style)：使用與限制
+
+1. 規則：
+    * 外層包大括號＋大括號
+    * 屬性有 dash 的改小駝峰寫法
+    * 以數字或字串傳遞值
+    * 搭配三元運算子判斷條件，再套用樣式
+    * 樣式物件也能抽出單獨撰寫
+    * 屬性有 dash 的改小駝峰寫法
+    * 屬性有 dash 的改小駝峰寫法
+2. 注意：
+    * 能不渲染就不渲染
+    * 無法實現 hover 、 media-query
+
+-----------------------------
+
+# 引入 CSS (外部引入)：使用與限制
+
+1. 規則：
+    * 用習慣的方式撰寫 CSS
+    * 屬性不用改小駝峰寫法
+    * 可以實現 hover 、 media-query
+    * 在要用的元件 import ，並搭配 className 套用
+    * 搭配三元運算子判斷條件，再套用樣式
+2. 注意：
+    * CSS 不會只對應到引入的元件
+    * CSS 載入的順序依照被 import 的順序，不是元件使用的順序
+
+-----------------------------
+
+# 引入 CSS ( Styled Components )：使用與限制
+1. 安裝： npm install --save styled-components
+2. Emmet ：下載 vscode-styled-components 套件
+3. 好處
+    * 不會有覆蓋問題
+    * 只載入相關樣式
+    * 和 React 元件化的概念相符
+2. 注意：
+    * 樣式因為變成亂數，不好除錯，可加上 .attr({className: xxx})
+
+-----------------------------
+
+# 引入 CSS ( Styled Components )： props 、 extend 、共用元件
+
+1. 用 props 設定會不斷用到的主題色等
+2. 用 extend 來套用他人已寫好的樣式（例如 Bootstrap），再客製化
+
+-----------------------------
+
+# 引入 CSS ： 在 React 中如何使用Bootstrap？（上）
+
+1. 介紹 Bootstrap
+React Bootstrap 官網： https://react-bootstrap.github.io/get...
+2. 安裝： npm install react-bootstrap bootstrap
+3. 可使用 variant 套用 primary secondary 等樣式、 extend 來客製化
+4. 介紹如何在全域清除預設瀏覽器樣式
+5. 使用 theme={theme} 搭配 props 設定自己的主題色
+
+-----------------------------
+
+# 引入 CSS ： 在 React 中如何使用Bootstrap？（下 ）
+
+1. 使用 map 大量生成 utils 樣式
+2. theme 放在不同地方的差別
+
+-----------------------------
+
+# Ｍaterial UI：安裝、System 、 Box 、 Typography 、 Link 、 Button 、 Material Icons
+
+1. 安裝： npm install @mui/material @emotion/react @emotion/styled
+icon 安裝： npm install @mui/icons-material
+官網： https://mui.com/material-ui/getting-s...
+icon 搜尋： https://mui.com/material-ui/material-...
+2.  學習一些基本的 Material UI  props
 
 
 
