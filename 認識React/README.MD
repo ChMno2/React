@@ -137,5 +137,53 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 5. componentDidUpdate ：每次重新渲染都會執行
 6. componentWillUnmount ：元件卸載前要做的事情
 
+-----------------------------
+
+# Lifecycle 和 useEffect
+
+1. useEffect 含有兩個參數，第一個放要執行的箭頭函式，第二個放要監聽的值，會放在陣列當中
+2. 對應到 componentDidMount：第二個參數放空陣列
+3. 對應到 componentDidUpdate ：第二個參數監聽要監聽的值
+4. 對應到 componentWillUnmount ：第二個參數放空陣列，第一個參數要把要執行的事情放在 return 中
+
+
+-----------------------------
+
+# Hook 
+
+1. Hook 是 React 先寫好的東西，方便我們不用從頭造輪子、可以直接開發，之前提過的 useState useEffect 都是 Hook
+2. 注意：
+    * 用 use 開頭
+    * 除了自製的 Hook ，其他都只能在 React Function 中呼叫
+    * 不要在迴圈、條件式、巢狀函式中呼叫
+3. 優點：
+    * 同個邏輯放在一起，易理解，增加元件重用性
+    * no more this
+    * 重用 stateful 邏輯
+
+-----------------------------
+
+# 建立 JSON Server 用 useEffect 模擬抓取、送出與刪除資料
+
+son-server 這個套件的指令為： npx json-server --watch data/db.json --port 8000
+
+
+-----------------------------
+
+# 客製化 Hook
+
+1. 重用 stateful 邏輯幫助我們能製作客製化 Hook 
+2. 撰寫時記得思考，怎樣可以增加重用性？（例如使用通用性高的命名、把可能不一樣的東西抽出來等）
+3. 可搭配 useEffect 做監聽
+
+-----------------------------
+
+# 
+
+
+
+
+
+
 
 
