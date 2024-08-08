@@ -92,9 +92,50 @@ usestate會回傳一個陣列，陣列包含兩個東西，[state,set state]
 非同步會等所有的資料更新完再重新渲染，因此數值可能會不對稱
 ->解決方式:改用props()
 
+-----------------------------
 
+# Props 、 State 和 Props 比較
 
+1. props 是用來單向傳遞父元件到子元件的資料
+2. 寫法如 data={ parentData } ，前面是子元件要使用的名稱，後面是父元件要傳的 State 名稱
+3. 子元件用 props 來取得資料
+4. Props 本身無法更改，但可以在子元件呼叫父元件的 setState 來改變值，也可用同樣方法來從子元件傳參數給父元件
+5. State 控制的是自己本身， 且可以被改變， Props 讓父元件來控制自己，唯獨、不可被改變
 
+-----------------------------
+
+# 重複渲染、條件渲染、預設值、 dangerouslySetInnerHTML
+
+1. 重複渲染： map
+2. 條件渲染： &&
+3. 預設值： ||
+4. dangerouslySetInnerHTML={{__html: State}}
+
+-----------------------------
+
+# Functional Component 、 Class Component
+
+1. 以前就有這兩種寫法，只是 React 16.8 之後多了 Hook ，讓 Functional Component 能做的事變多了
+2. Class Component 要注意：
+    * State 統一放在 state 物件，取用要加上 this.state
+    * 改值要使用 this.setState ，只會替換掉有改變的內容
+    * 只要有調用 this.setState 就重新渲染
+    * 用 props 傳改變 State 的函式需搭配 .bind(this) 
+3. 相較之下， Functional Component 
+    * 比較簡潔
+    * 可避免不必要渲染
+    * 可避免 this 問題
+
+-----------------------------
+
+# Lifecycle 和 Class Component
+
+1. 元件像人一樣有生有死，而生命週期幫助我們能在「特定階段」，做「只有該階段會做的事情」
+2. constructor ：初始化與建構物件
+3. render ：渲染
+4. componentDidMount：只有第一次渲染會執行
+5. componentDidUpdate ：每次重新渲染都會執行
+6. componentWillUnmount ：元件卸載前要做的事情
 
 
 
